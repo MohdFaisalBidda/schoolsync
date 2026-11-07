@@ -52,7 +52,9 @@ The web app never calls a model directly. It posts an addressed request to the r
 
 ## Demo
 
-<video src="demo/schoolsync-demo.mp4" controls width="640" />
+<video controls width="640">
+  <source src="https://drive.google.com/uc?export=download&id=1642yk_dKxQ5Qs5_ZFIlDnEay8ZYhkwc" type="video/mp4" />
+</video>
 
 - `demo/schoolsync-demo.mp4` — 60-second final cut, rendered from the 96-second source at 1.6× speed, with the Switch loop, the three workflows, the in-chat approval card, the classroom display, the admin console, and the architecture.
 - `demo/SCRIPT.md` — shot list, 60-second voiceover, two-minute live pitch, design reference, and submission blurb.
