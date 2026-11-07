@@ -52,12 +52,22 @@ The web app never calls a model directly. It posts an addressed request to the r
 
 ## Demo
 
-<video controls width="640">
-  <source src="https://drive.google.com/uc?export=download&id=1642yk_dKxQ5Qs5_ZFIlDnEay8ZYhkwc" type="video/mp4" />
-</video>
+<div align="center">
+
+<a href="https://drive.google.com/file/d/1642yk_dKxQ5Qs5_ZFIlDnEay8ZYhkwc/view" target="_blank" rel="noopener">
+  <img src="demo/thumbnail.jpg" alt="SchoolSync demo video: ask in chat, approve as a person, publish to the classroom" width="720">
+</a>
+
+<p><em>60-second demo — click to watch on Google Drive</em></p>
+
+<img src="demo/gifs/ask-draft.gif" alt="The ask: a teacher requests in Telegram, the teaching agent drafts, the room posts a one-tap approval card" width="640">
+
+</div>
 
 - `demo/schoolsync-demo.mp4` — 60-second final cut, rendered from the 96-second source at 1.6× speed, with the Switch loop, the three workflows, the in-chat approval card, the classroom display, the admin console, and the architecture.
+- `demo/gifs/` — short loops cut from the final video: `ask-draft`, `approve-publish`, `families-loop`, `final-boss`.
 - `demo/SCRIPT.md` — shot list, 60-second voiceover, two-minute live pitch, design reference, and submission blurb.
+- `demo/cover.html` / `demo/cover.jpg` — the 1280×720 blog cover, rendered from the HTML with headless Chrome.
 - `demo/` — HTML animation, real app screenshots, and the Playwright/ffmpeg recording script.
 
 ## Run locally

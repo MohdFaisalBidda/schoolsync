@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: "Fraunces";
+    src: url("assets/fraunces.woff2") format("woff2");
+    font-weight: 400 900;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("assets/inter.woff2") format("woff2");
+    font-weight: 400 700;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 720px; }
+  body {
+    font-family: "Inter", sans-serif;
+    background:
+      radial-gradient(900px 620px at 82% -10%, rgba(207, 138, 33, 0.16), transparent 60%),
+      radial-gradient(1100px 760px at -10% 110%, rgba(15, 61, 42, 0.55), transparent 65%),
+      #0e2620;
+    color: #f6f2e8;
+    overflow: hidden;
+    position: relative;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(246, 242, 232, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(246, 242, 232, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(1000px 700px at 50% 40%, #000 55%, transparent 100%);
+  }
+  .bar {
+    position: absolute; top: 44px; left: 64px; right: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: #0b1f19; border: 1px solid rgba(246, 242, 232, 0.14);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo svg { width: 24px; height: 24px; }
+  .brand .name { font-size: 22px; font-weight: 700; letter-spacing: 0.2px; }
+  .brand .sub { font-size: 12px; font-weight: 600; letter-spacing: 2.2px; color: rgba(246, 242, 232, 0.55); margin-top: 2px; }
+  .chips { display: flex; gap: 10px; }
+  .chip {
+    font-size: 12px; font-weight: 700; letter-spacing: 2.2px;
+    color: rgba(246, 242, 232, 0.72);
+    border: 1px solid rgba(246, 242, 232, 0.18);
+    border-radius: 999px; padding: 9px 16px;
+    background: rgba(11, 31, 25, 0.5);
+  }
+  .kicker {
+    position: absolute; left: 64px; top: 158px;
+    font-size: 13px; font-weight: 700; letter-spacing: 3.2px;
+    color: #d99c4e;
+  }
+  h1 {
+    position: absolute; left: 64px; top: 196px;
+    font-family: "Fraunces", serif;
+    font-size: 76px; line-height: 1.06; font-weight: 600;
+    max-width: 1020px;
+  }
+  h1 .word {
+    display: block;
+    font-style: italic; font-weight: 500;
+    font-size: 64px;
+    color: #bfe3d2;
+    margin-top: 22px;
+  }
+  .flow {
+    position: absolute; left: 64px; top: 516px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .step {
+    display: flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(246, 242, 232, 0.16);
+    background: rgba(11, 31, 25, 0.55);
+    border-radius: 12px; padding: 12px 20px;
+    font-size: 16px; font-weight: 600; color: #f6f2e8;
+  }
+  .step .dot { width: 8px; height: 8px; border-radius: 999px; }
+  .arrow { color: rgba(246, 242, 232, 0.45); font-size: 18px; }
+  .footer {
+    position: absolute; left: 64px; right: 64px; bottom: 44px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .promise { font-family: "Fraunces", serif; font-style: italic; font-size: 26px; color: #f0d9b6; }
+  .stats { font-size: 14px; font-weight: 600; letter-spacing: 1.6px; color: rgba(246, 242, 232, 0.6); }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+
+  <div class="bar">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 5.5C5.5 4.2 8.2 4.2 11 5.5V19C8.2 17.7 5.5 17.7 3 19V5.5Z" fill="#f6f2e8"/>
+          <path d="M13 5.5C15.8 4.2 18.5 4.2 21 5.5V19C18.5 17.7 15.8 17.7 13 19V5.5Z" fill="#f6f2e8" opacity="0.55"/>
+        </svg>
+      </div>
+      <div>
+        <div class="name">SchoolSync</div>
+        <div class="sub">POWERED BY SWITCH</div>
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip">SWITCH</span>
+      <span class="chip">TELEGRAM</span>
+    </div>
+  </div>
+
+  <div class="kicker">FLIP THE SWITCH HACKATHON · A HUMAN-APPROVED AGENTIC SCHOOL</div>
+
+  <h1>We put three AI agents in a school.
+    <span class="word">A human still has the last&nbsp;word.</span>
+  </h1>
+
+  <div class="flow">
+    <span class="step"><span class="dot" style="background:#d99c4e"></span>Phone chat</span>
+    <span class="arrow">&#8594;</span>
+    <span class="step"><span class="dot" style="background:#bfe3d2"></span>Switch</span>
+    <span class="arrow">&#8594;</span>
+    <span class="step"><span class="dot" style="background:#d99c4e"></span>Approval</span>
+    <span class="arrow">&#8594;</span>
+    <span class="step"><span class="dot" style="background:#bfe3d2"></span>Classroom screen</span>
+  </div>
+
+  <div class="footer">
+    <div class="promise">Less admin. More teaching.</div>
+    <div class="stats">3 ROOMS &#183; 3 AGENTS &#183; 1 HUMAN GATE</div>
+  </div>
+</body>
+</html>
