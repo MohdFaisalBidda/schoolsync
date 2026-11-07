@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>SchoolSync — demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="title-mode">
+    <div class="stage">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+      <div class="progress"><span></span></div>
+
+      <header class="masthead">
+        <div class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="42" height="42" rx="13" fill="currentColor" opacity=".12" />
+              <path d="M24 12.5c-3.7-2.4-8.1-2.8-12-1.4v19.2c3.9-1.4 8.3-1 12 1.4 3.7-2.4 8.1-2.8 12-1.4V11.1c-3.9-1.4-8.3-1-12 1.4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+              <path d="M24 13v18.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M15 17.5c2.2-.3 4.3 0 6.2.9M15 22c2.2-.3 4.3 0 6.2.9M33 17.5c-2.2-.3-4.3 0-6.2.9M33 22c-2.2-.3-4.3 0-6.2.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".7" />
+            </svg>
+          </span>
+          <span class="brand-name">SchoolSync</span>
+          <span class="brand-pill">DEMO</span>
+        </div>
+        <div class="masthead-right">
+          <span class="live-dot"></span>
+          <span>Switch + Telegram</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="scene s1 active" id="s1">
+          <div class="title-wrap">
+            <span class="crest-lg">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="42" height="42" rx="13" fill="currentColor" opacity=".12" />
+                <path d="M24 12.5c-3.7-2.4-8.1-2.8-12-1.4v19.2c3.9-1.4 8.3-1 12 1.4 3.7-2.4 8.1-2.8 12-1.4V11.1c-3.9-1.4-8.3-1-12 1.4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                <path d="M24 13v18.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M15 17.5c2.2-.3 4.3 0 6.2.9M15 22c2.2-.3 4.3 0 6.2.9M33 17.5c-2.2-.3-4.3 0-6.2.9M33 22c-2.2-.3-4.3 0-6.2.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".7" />
+              </svg>
+            </span>
+            <p class="kicker">FLIP THE SWITCH HACKATHON · 2026</p>
+            <h1>SchoolSync</h1>
+            <p class="title-sub">One chat. Every classroom. One approval.</p>
+            <p class="title-tag">Built on Switch · Decisions stay human</p>
+            <div class="title-flow" aria-hidden="true">
+              <span class="flow-node">Phone chat</span>
+              <i class="flow-link"></i>
+              <span class="flow-node flow-core">Switch</span>
+              <i class="flow-link"></i>
+              <span class="flow-node">Approval</span>
+              <i class="flow-link"></i>
+              <span class="flow-node flow-gate">Classroom screen</span>
+            </div>
+            <div class="meta-line">
+              <span>3 rooms</span><i></i><span>3 role agents</span><i></i><span>1 approval gate</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene s2" id="s2">
+          <div class="problem-wrap">
+            <div class="problem-copy">
+              <p class="kicker">THE PROBLEM</p>
+              <h2>The small requests<br />add up.</h2>
+              <p class="lede">A worksheet. A notice. An activity. Every one needs a first draft and a person who signs off.</p>
+            </div>
+            <div class="request-stack">
+              <div class="request-card">
+                <span class="req-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l4 4v13H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5v4h4M9.5 12h6M9.5 16h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span class="req-copy"><strong>Worksheet</strong><small>for tomorrow</small></span>
+                <span class="req-status">waiting</span>
+              </div>
+              <div class="request-card">
+                <span class="req-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 9.5h14M6.5 9.5v9h11v-9M9 6l3-2.5L15 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span class="req-copy"><strong>Notice</strong><small>for families</small></span>
+                <span class="req-status">waiting</span>
+              </div>
+              <div class="request-card">
+                <span class="req-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="4.5" y="5.5" width="15" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 3.5v4M16 3.5v4M8 12h8M8 15.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span class="req-copy"><strong>Activity</strong><small>for Friday</small></span>
+                <span class="req-status">waiting</span>
+              </div>
+              <p class="problem-line">Every one waits on a person.</p>
+              <div class="pending-pill"><span class="live-dot"></span>3 approvals waiting</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene s3" id="s3">
+          <div class="copy-col s3-copy">
+            <p class="kicker">01 / THE ASK</p>
+            <h2>Teachers ask<br />where they<br />already talk.</h2>
+            <p class="lede">No new tool. No prompt box. A message in the classroom group starts the work. The agent drafts; the room posts a one-tap approval card; a person decides.</p>
+            <div class="mini-flow"><span>Ask</span><i></i><span>Draft</span><i></i><span>Card</span><i></i><span>Review</span></div>
+          </div>
+
+          <div class="tg-panel s3-tg">
+            <div class="tg-head">
+              <span class="tg-avatar group">SC</span>
+              <div class="tg-title"><strong>SchoolSync Classroom</strong><span>Grade 5 · 4 members</span></div>
+              <span class="tg-connected"><span class="live-dot"></span>Switch</span>
+            </div>
+            <div class="tg-body">
+              <div class="tg-day">Today</div>
+
+              <div class="tg-msg out teacher-msg">
+                <div class="tg-bubble out-bubble">
+                  <p>@schoolsync-teaching-agent could you create a 5-question equivalent fractions worksheet for Grade 5, with an answer key?</p>
+                  <time>9:41</time>
+                </div>
+              </div>
+
+              <div class="tg-typing">
+                <span class="tg-avatar agent-av">ST</span>
+                <span class="typing-dots"><i></i><i></i><i></i></span>
+                <span>SchoolSync Teaching Agent is typing</span>
+              </div>
+
+              <div class="tg-msg in agent-msg">
+                <span class="tg-avatar agent-av">ST</span>
+                <div class="tg-msg-body">
+                  <div class="tg-meta"><strong>SchoolSync Teaching Agent</strong><span class="ai-badge">AI</span><time>9:41</time></div>
+                  <div class="tg-bubble in-bubble">
+                    <div class="doc-card">
+                      <div class="doc-head">
+                        <span class="doc-mark">
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M7 3.5h7l4 4v13H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5v4h4M9.5 12h6M9.5 16h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </span>
+                        <span><strong>Equivalent Fractions Worksheet</strong><small>Grade 5 · 5 questions · answer key</small></span>
+                      </div>
+                      <ol class="doc-list">
+                        <li><span>1/2 = ?/4</span><span>2/3 = ?/9</span></li>
+                        <li><span>3/4 = ?/8</span><span>5/10 = ?/2</span></li>
+                        <li><span>4/6 = ?/12</span><span class="doc-note">answer key included</span></li>
+                      </ol>
+                    </div>
+                    <div class="doc-foot">Draft · awaiting teacher review</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="draft-chip"><span class="check-mini">✓</span>Draft ready for Ms. Rivera</div>
+
+              <div class="tg-msg in agent-approval">
+                <span class="tg-avatar agent-av">ST</span>
+                <div class="tg-msg-body">
+                  <div class="tg-meta"><strong>SchoolSync Teaching Agent</strong><span class="ai-badge">AI</span><time>9:41</time></div>
+                  <div class="tg-bubble in-bubble approval-card">
+                    <span class="approval-kicker">APPROVAL NEEDED</span>
+                    <strong>Equivalent Fractions Worksheet</strong>
+                    <p>Grade 5 · Ms. Rivera asks. Nothing publishes until a person approves.</p>
+                    <div class="approval-actions">
+                      <span class="approval-action">Open approval</span>
+                      <span class="approval-action">Return</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tg-input"><span>Message</span><span class="send">➤</span></div>
+          </div>
+        </section>
+
+        <section class="scene s4" id="s4">
+          <div class="copy-col s4-copy">
+            <p class="kicker">02 / THE APPROVAL</p>
+            <h2>A person<br />still makes<br />the call.</h2>
+            <p class="lede">The draft lands in SchoolSync with the teacher's review. Approve, send back, or regenerate — nothing goes out on its own.</p>
+            <div class="approval-steps"><span class="done">Draft</span><i></i><span>Review</span><i></i><span>Approved</span></div>
+          </div>
+
+          <div class="browser-frame s4-frame">
+            <div class="chrome">
+              <span class="traffic t1"></span><span class="traffic t2"></span><span class="traffic t3"></span>
+              <span class="url">schoolsync.local/teaching</span>
+              <span class="chrome-dots">•••</span>
+            </div>
+            <div class="shot-wrap">
+              <img src="assets/teaching-pending.png" alt="Teacher reviewing a worksheet" />
+              <span class="hotspot" style="left: 899px; top: 674px; width: 316px; height: 32px"></span>
+              <span class="cursor" style="--sx: 760px; --sy: 835px; --tx: 1057px; --ty: 690px"></span>
+              <span class="click-ring" style="left: 1057px; top: 690px"></span>
+              <span class="approve-toast"><span class="toast-check">✓</span><span><strong>Approved</strong><small>Ms. Rivera · just now</small></span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene s5" id="s5">
+          <div class="copy-col s5-copy">
+            <p class="kicker">03 / THE PROOF</p>
+            <h2>Approved.<br />Then visible.</h2>
+            <p class="lede">The approved worksheet lands on the read-only classroom display. The teacher's conversation stays in the classroom chat.</p>
+            <div class="proof-list">
+              <span><i>✓</i>Grade 5</span>
+              <span><i>✓</i>Answer key</span>
+              <span><i>✓</i>Teacher-approved</span>
+            </div>
+          </div>
+          <div class="browser-frame s5-frame">
+            <div class="chrome">
+              <span class="traffic t1"></span><span class="traffic t2"></span><span class="traffic t3"></span>
+              <span class="url">schoolsync.local/teaching/approved</span>
+              <span class="chrome-dots">•••</span>
+            </div>
+            <div class="shot-wrap">
+              <img src="assets/classroom-display.png" alt="Classroom display showing the approved worksheet" />
+              <span class="view-chip"><span class="check-mini">✓</span>Classroom display · Grade 5</span>
+              <span class="approved-seal">APPROVED</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene s6" id="s6">
+          <div class="top-copy">
+            <p class="kicker">04 / THE NOTICE</p>
+            <h2>One approval. The right room. The right families.</h2>
+            <p class="lede">The principal approves; the operations agent distributes the notice to the operations room and the parent portal.</p>
+          </div>
+
+          <div class="browser-frame s6-frame">
+            <div class="chrome">
+              <span class="traffic t1"></span><span class="traffic t2"></span><span class="traffic t3"></span>
+              <span class="url">schoolsync.local/notices</span>
+              <span class="chrome-dots">•••</span>
+            </div>
+            <div class="shot-wrap">
+              <img class="base" src="assets/notices-pending.png" alt="Principal reviewing a notice" />
+              <span class="hotspot" style="left: 787px; top: 625px; width: 277px; height: 28px"></span>
+              <span class="cursor" style="--sx: 700px; --sy: 770px; --tx: 925px; --ty: 640px"></span>
+              <span class="click-ring" style="left: 925px; top: 640px"></span>
+              <span class="approve-toast small"><span class="toast-check">✓</span><span><strong>Distributed</strong><small>Parents &amp; guardians</small></span></span>
+              <img class="after" src="assets/notices-approved-same.png" alt="Parent viewing the approved notice" />
+              <span class="view-chip parent"><span class="check-mini">✓</span>Parent view</span>
+            </div>
+          </div>
+
+          <div class="tg-panel s6-tg">
+            <div class="tg-head">
+              <span class="tg-avatar group ops">SO</span>
+              <div class="tg-title"><strong>School Operations</strong><span>Staff room · 4 members</span></div>
+              <span class="tg-connected"><span class="live-dot"></span>Switch</span>
+            </div>
+            <div class="tg-body">
+              <div class="tg-day">Today</div>
+              <div class="tg-status-chip"><span>✓</span>Approved <i></i> Distributed</div>
+              <div class="tg-msg in ops-msg">
+                <span class="tg-avatar agent-av ops">SO</span>
+                <div class="tg-msg-body">
+                  <div class="tg-meta"><strong>SchoolSync Operations Agent</strong><span class="ai-badge">AI</span><time>now</time></div>
+                  <div class="tg-bubble in-bubble notice-bubble">
+                    <span class="notice-kicker">SCHOOL NOTICE · PARENTS &amp; GUARDIANS</span>
+                    <strong>Parent–Teacher Conferences</strong>
+                    <p>Next Wednesday and Thursday, 3:30–6:00 PM. Book a 15-minute slot through the school office by Monday.</p>
+                    <div class="notice-foot">Approved by Principal Hart</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tg-input"><span>Message</span><span class="send">➤</span></div>
+          </div>
+        </section>
+
+        <section class="scene s7" id="s7">
+          <div class="top-copy">
+            <p class="kicker">05 / THE ACTIVITY</p>
+            <h2>The same loop for the school day.</h2>
+            <p class="lede">A coordinator approves the plan; the activities agent announces it to the activities room and the student portal.</p>
+          </div>
+
+          <div class="browser-frame s7-frame">
+            <div class="chrome">
+              <span class="traffic t1"></span><span class="traffic t2"></span><span class="traffic t3"></span>
+              <span class="url">schoolsync.local/activities</span>
+              <span class="chrome-dots">•••</span>
+            </div>
+            <div class="shot-wrap">
+              <img class="base" src="assets/activities-pending.png" alt="Coordinator reviewing an activity plan" />
+              <span class="hotspot" style="left: 787px; top: 645px; width: 277px; height: 28px"></span>
+              <span class="cursor" style="--sx: 700px; --sy: 790px; --tx: 925px; --ty: 660px"></span>
+              <span class="click-ring" style="left: 925px; top: 660px"></span>
+              <span class="approve-toast small"><span class="toast-check">✓</span><span><strong>Announced</strong><small>Grade 5 · Activities</small></span></span>
+              <img class="after" src="assets/activities-approved-same.png" alt="Student viewing the approved activity" />
+              <span class="view-chip parent"><span class="check-mini">✓</span>Student view</span>
+            </div>
+          </div>
+
+          <div class="tg-panel s7-tg">
+            <div class="tg-head">
+              <span class="tg-avatar group act">SA</span>
+              <div class="tg-title"><strong>School Activities</strong><span>Grade 5 · 4 members</span></div>
+              <span class="tg-connected"><span class="live-dot"></span>Switch</span>
+            </div>
+            <div class="tg-body">
+              <div class="tg-day">Today</div>
+              <div class="tg-status-chip"><span>✓</span>Approved <i></i> Announced</div>
+              <div class="tg-msg in act-msg">
+                <span class="tg-avatar agent-av act">SA</span>
+                <div class="tg-msg-body">
+                  <div class="tg-meta"><strong>SchoolSync Activities Agent</strong><span class="ai-badge">AI</span><time>now</time></div>
+                  <div class="tg-bubble in-bubble notice-bubble">
+                    <span class="notice-kicker">ACTIVITY APPROVED · GRADE 5</span>
+                    <strong>School Garden Day</strong>
+                    <p>Sunday 22 November · 9:00–11:45 · School Garden. We will plant, compost, and keep garden journals. Materials: seedlings, trowels, gloves, compost, watering cans.</p>
+                    <div class="notice-foot">Approved by Coach Bello</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tg-input"><span>Message</span><span class="send">➤</span></div>
+          </div>
+        </section>
+
+        <section class="scene s8" id="s8">
+          <div class="top-copy arch-copy">
+            <p class="kicker">06 / UNDER THE HOOD</p>
+            <h2>Chat is the interface. Switch is the bus.</h2>
+            <p class="lede">Every group is a Switch room. Every agent is a Switch agent. Every outbound message waits for a person. The web app is optional for audit; the admin console watches exceptions and the audit trail.</p>
+          </div>
+
+          <div class="diagram">
+            <div class="col-head chat-head">TEAM CHAT</div>
+            <div class="col-head switch-head">SWITCH</div>
+            <div class="col-head agents-head">AGENTS</div>
+
+            <div class="chat-card c1"><span class="node-icon">#</span><span><strong>Classroom</strong><small>Grade 5</small></span><em>Telegram</em></div>
+            <div class="chat-card c2"><span class="node-icon">#</span><span><strong>Operations</strong><small>Staff</small></span><em>Telegram</em></div>
+            <div class="chat-card c3"><span class="node-icon">#</span><span><strong>Activities</strong><small>Grade 5</small></span><em>Telegram</em></div>
+
+            <div class="switch-box">
+              <span class="switch-label">POSTGRES MESSAGE BUS</span>
+              <div class="switch-rooms">
+                <span>Classroom room</span><span>Operations room</span><span>Activities room</span>
+              </div>
+              <div class="switch-router"><span class="live-dot"></span>Router · decides every row for every agent</div>
+              <div class="switch-foot">seq · notify · agent events</div>
+            </div>
+
+            <div class="agent-card a1"><span class="node-icon amber">✳</span><span><strong>Teaching</strong><small>drafts worksheets</small></span><em>OpenCode</em></div>
+            <div class="agent-card a2"><span class="node-icon amber">✳</span><span><strong>Operations</strong><small>distributes notices</small></span><em>OpenCode</em></div>
+            <div class="agent-card a3"><span class="node-icon amber">✳</span><span><strong>Activities</strong><small>announces plans</small></span><em>OpenCode</em></div>
+
+            <div class="approval-gate">
+              <span class="gate-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19 6v5.5c0 4.4-2.8 7.6-7 9-4.2-1.4-7-4.6-7-9V6l7-2.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.3-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span><strong>SchoolSync</strong><small>Human approval gate</small></span>
+              <em>required</em>
+            </div>
+
+            <svg class="wires" viewBox="0 0 1740 680" fill="none">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0 10 5 0 10z" fill="rgba(246,241,231,.3)" />
+                </marker>
+              </defs>
+              <path class="wire w1" d="M340 96 C 430 96, 440 120, 520 120" marker-end="url(#arrow)" />
+              <path class="wire w2" d="M340 216 C 430 216, 440 220, 520 220" marker-end="url(#arrow)" />
+              <path class="wire w3" d="M340 336 C 430 336, 440 320, 520 320" marker-end="url(#arrow)" />
+              <path class="wire w4" d="M1220 120 C 1300 120, 1310 96, 1400 96" marker-end="url(#arrow)" />
+              <path class="wire w5" d="M1220 220 C 1300 220, 1310 216, 1400 216" marker-end="url(#arrow)" />
+              <path class="wire w6" d="M1220 320 C 1300 320, 1310 336, 1400 336" marker-end="url(#arrow)" />
+              <path class="wire w7" d="M870 468 L 870 500" marker-end="url(#arrow)" />
+              <path class="wire w8" d="M1010 555 C 1110 555, 1170 500, 1220 420" marker-end="url(#arrow)" />
+              <path class="wire w9" d="M730 555 C 640 555, 590 500, 540 420" marker-end="url(#arrow)" />
+            </svg>
+            <div class="gate-note">No outbound message bypasses the gate.</div>
+          </div>
+        </section>
+
+        <section class="scene s9" id="s9">
+          <div class="close-grid">
+            <div class="close-copy">
+              <p class="kicker">WHY SWITCH</p>
+              <h2>One Switch.<br />Every school loop.</h2>
+              <p class="close-line">Phone chat asks. Switch routes. The room posts the approval card. A person approves. The classroom screen publishes.</p>
+              <div class="close-stats">
+                <span><strong>3</strong><small>school rooms</small></span>
+                <span><strong>3</strong><small>role agents</small></span>
+                <span><strong>1</strong><small>human approval gate</small></span>
+              </div>
+              <p class="close-dependency">Without Switch, there is no shared room, no agent identity, no loop to approve.</p>
+              <p class="close-final">Ask in chat. Draft with agent. Approve as a person. Publish to classroom. Less admin. More teaching.</p>
+            </div>
+            <div class="close-visual" aria-hidden="true">
+              <div class="switch-ring">
+                <span class="ring-node n1">Phone chat</span>
+                <span class="ring-node n2">Switch</span>
+                <span class="ring-node n3">Role agents</span>
+                <span class="ring-node n4">Approval</span>
+                <span class="orbit-dot"></span>
+                <span class="switch-core"><small>BUS + RUNTIME</small><strong>Switch</strong></span>
+              </div>
+            </div>
+          </div>
+          <p class="close-foot">SchoolSync · Flip the Switch Hackathon · 2026</p>
+        </section>
+      </main>
+    </div>
+    <script src="timeline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  TEACHER
+  PARENT
+  COORDINATOR
+  ADMIN
+  PRINCIPAL
+}
+
+enum ContentStatus {
+  DRAFT
+  PENDING_APPROVAL
+  APPROVED
+  REJECTED
+}
+
+enum NoticeAudience {
+  ALL
+  STUDENTS
+  PARENTS
+  STAFF
+}
+
+enum ApprovalKind {
+  MATERIAL
+  NOTICE
+  ACTIVITY
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role
+  gradeLevel   String?
+  createdAt    DateTime @default(now())
+
+  materials          TeachingMaterial[] @relation("MaterialAuthor")
+  approvedMaterials  TeachingMaterial[] @relation("MaterialApprover")
+  notices            Notice[]           @relation("NoticeAuthor")
+  approvedNotices    Notice[]           @relation("NoticeApprover")
+  activities         Activity[]         @relation("ActivityAuthor")
+  approvedActivities Activity[]         @relation("ActivityApprover")
+  approvalsRequested Approval[]         @relation("ApprovalRequester")
+  approvalsReviewed  Approval[]         @relation("ApprovalReviewer")
+}
+
+model TeachingMaterial {
+  id            String        @id @default(uuid())
+  title         String
+  subject       String
+  gradeLevel    String
+  prompt        String
+  content       String        @default("")
+  status        ContentStatus @default(DRAFT)
+  switchRoomId  String?
+  agentReplySeq Int?
+  authorId      String
+  author        User          @relation("MaterialAuthor", fields: [authorId], references: [id])
+  approvedById  String?
+  approvedBy    User?         @relation("MaterialApprover", fields: [approvedById], references: [id])
+  approvedAt    DateTime?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([status, gradeLevel])
+}
+
+model Notice {
+  id              String         @id @default(uuid())
+  title           String
+  brief           String
+  body            String         @default("")
+  audience        NoticeAudience @default(ALL)
+  status          ContentStatus  @default(DRAFT)
+  switchRoomId    String?
+  switchMessageId String?
+  authorId        String
+  author          User           @relation("NoticeAuthor", fields: [authorId], references: [id])
+  approvedById    String?
+  approvedBy      User?          @relation("NoticeApprover", fields: [approvedById], references: [id])
+  approvedAt      DateTime?
+  publishedAt     DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([status, audience])
+}
+
+model Activity {
+  id            String        @id @default(uuid())
+  title         String
+  description   String
+  eventDate     DateTime
+  location      String
+  plan          String        @default("")
+  status        ContentStatus @default(DRAFT)
+  switchRoomId  String?
+  agentReplySeq Int?
+  authorId      String
+  author        User          @relation("ActivityAuthor", fields: [authorId], references: [id])
+  approvedById  String?
+  approvedBy    User?         @relation("ActivityApprover", fields: [approvedById], references: [id])
+  approvedAt    DateTime?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([status, eventDate])
+}
+
+model Approval {
+  id          String        @id @default(uuid())
+  kind        ApprovalKind
+  entityId    String
+  entityTitle String
+  requesterId String
+  requester   User          @relation("ApprovalRequester", fields: [requesterId], references: [id])
+  reviewerId  String?
+  reviewer    User?         @relation("ApprovalReviewer", fields: [reviewerId], references: [id])
+  status      ContentStatus @default(PENDING_APPROVAL)
+  comment     String?
+  createdAt   DateTime      @default(now())
+  decidedAt   DateTime?
+
+  @@unique([kind, entityId])
+  @@index([status, createdAt])
+}
+
+model SwitchRoom {
+  id                String  @id
+  switchRoomId      String  @unique
+  name              String
+  purpose           String  @unique
+  agentId           String
+  agentName         String
+  mattermostChannel String?
+}
